@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<JsonSerializerIsReflectionEnabledByDefault>false</JsonSerializerIsReflectionEnabledByDefault>
+		<InvariantGlobalization>true</InvariantGlobalization>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+		<ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+		<ServerGarbageCollection>true</ServerGarbageCollection>
+		<OptimizationPreference>Speed</OptimizationPreference>
+		<SelfContained>true</SelfContained>
+		<PublishAot>true</PublishAot>
+		<DebugSymbols>false</DebugSymbols>
+		<DebugType>none</DebugType>
+		<TrimMode>full</TrimMode>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Blake3" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.3" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.4" Condition="'$(Configuration)'=='Debug'" />
+		<PackageReference Include="System.IO.Hashing" Version="10.0.3" />
+	</ItemGroup>
+
+</Project>

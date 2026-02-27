@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Text.Hashing.Api/Text.Hashing.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Text.Hashing.Load.Tests/Text.Hashing.Load.Tests.csproj" Id="c2aefa43-6d0e-4b35-ae35-44a4683a2f19" />
+  </Folder>
+</Solution>
